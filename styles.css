@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Garamond', serif;
+    background: #f5f0e1;
+    color: #3a3a3a;
+    padding: 20px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: #f8f1e4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #b79c78;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Form Styling */
+input, select, button {
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #b79c78;
+    background: #fdf7e3;
+    color: #3a3a3a;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button {
+    background: #6d4c41;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #4e342e;
+}
+
+/* Task List */
+.task-item {
+    border: 2px solid #b79c78;
+    padding: 15px;
+    margin: 10px 0;
+    background: #fcf5e6;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.dark-mode .container {
+    background: #3a3a3a;
+    color: #f8f8f8;
+    border: 2px solid #8b6b3a;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode button {
+    background: #4a4a4a;
+    color: #f8f8f8;
+    border: 2px solid #8b6b3a;
+}
+
+.dark-mode .task-item {
+    background: #3b3b3b;
+    border: 2px solid #8b6b3a;
+}
+
+.dark-mode button {
+    background: #8b6b3a;
+}
+
+.dark-mode button:hover {
+    background: #70552b;
+}
+
+/* Priority Labels */
+.priority {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.priority.high {
+    color: red;
+}
+
+.priority.medium {
+    color: orange;
+}
+
+.priority.low {
+    color: green;
+}
+
+/* Category */
+.category {
+    font-style: italic;
+    font-size: 16px;
+}
+
+/* Buttons */
+.delete-btn, .complete-btn {
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background: darkred;
+}
+
+.complete-btn {
+    background: darkgreen;
+}
+
+/* Notifications */
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 15px;
+    background: #ffeb3b;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations for Dark Mode Toggle */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dark-mode .notification {
+    background: #8b6b3a;
+    color: #fff;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Task Manager</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-4 p-4 rounded shadow-lg bg-white">
+        <h1 class="text-center text-dark">📜 Vintage Task Manager</h1>
+
+        <!-- Task Form -->
+        <form id="task-form" class="mb-4">
+            <div class="mb-3">
+                <label for="title" class="form-label">Task Title</label>
+                <input type="text" id="title" class="form-control" placeholder="Enter task title" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" id="description" class="form-control" placeholder="Enter task description">
+            </div>
+            <div class="mb-3">
+                <label for="priority" class="form-label">Priority</label>
+                <select id="priority" class="form-select">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select id="category" class="form-select">
+                    <!-- Categories will be populated dynamically -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">➕ Add Task</button>
+        </form>
+
+        <!-- Task Controls -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <select id="filter" class="form-select w-50">
+                <option value="All">All</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Urgent">Urgent</option>
+            </select>
+
+            <input type="text" id="search" class="form-control w-50 ms-2" placeholder="🔍 Search tasks">
+        </div>
+
+        <button id="theme-toggle" class="btn btn-dark w-100 mb-3">🌙 Toggle Dark Mode</button>
+
+        <!-- Task List -->
+        <div id="task-list"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
